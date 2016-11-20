@@ -2,8 +2,7 @@ public class List
 {
   // properties
   Node head;
-
-  // Constructors
+ // Constructors
   List() { 
     this.head = null;
     
@@ -84,7 +83,7 @@ public class List
                    {
                            temp = this.get(i).getData();                //swap elements
                            this.get(i).setData(this.get(i+1).getData());
-                          this.get(i=1).setData(temp);
+                          this.get(i+1).setData(temp);
                           flag = true;              //shows a swap occurred  
                   } 
             } 
