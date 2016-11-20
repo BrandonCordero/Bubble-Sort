@@ -2,7 +2,6 @@ public class Node {
   // properties
   private int data;
   private Node next;
-}
 // Constructors
   Node(int d) { 
     this.data = d; 
