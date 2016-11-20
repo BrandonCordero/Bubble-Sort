@@ -58,10 +58,37 @@ public class List
     }
     return current;
   }
+  public int Size(){
+    Node current = this.head;
+    int num = 0;
+    while(current != null)
+    {
+      
+    num ++;
+    current = current.getNext();
+    
+  }
+    return num;
+  }
   public void bubbleSort(){
-    
-    
-    
+     int i;
+     boolean flag = true;   // set flag to true to begin first pass
+     int temp;   //holding variable
+
+     while ( flag )
+     {
+            flag= false;    //set flag to false awaiting a possible swap
+            for( i=0;  i < this.Size() -1;  i++ )
+            {
+                   if ( this.get(i).getData() > this.get(i+1).getData() )   // ascending sort
+                   {
+                           temp = this.get(i).getData();                //swap elements
+                           this.get(i).setData(this.get(i+1).getData());
+                          this.get(i=1).setData(temp);
+                          flag = true;              //shows a swap occurred  
+                  } 
+            } 
+      }  
   }
   
   public boolean isEmpty() {
